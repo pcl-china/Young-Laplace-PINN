@@ -9,11 +9,11 @@ In this file:
 
 •	Lines 1-8 are used to import external libraries in Python.
 
-•	Lines 11-27 define the DNN class, which inherits the torch.nn.Module module and is used to construct a custom network structure for the neural network.
+•	Lines 11-27 define the **DNN** class, which inherits the **torch.nn.Module** module and is used to construct a custom network structure for the neural network.
 
-•	Lines 30-33 indicate that if a CUDA device is available, it will be used preferentially for GPU parallel computing.
+•	Lines 30-33 indicate that if a **CUDA** device is available, it will be used preferentially for **GPU** parallel computing.
 
-•	Lines 35-69 define a PhysicsInformedNN class, which is used for PINN computations and to store PINN computation information. When declaring a PhysicsInformedNN object, it is necessary to input the coordinates of points within the domain x_area, boundary point coordinates x_bc, unit normal vectors of the boundary points n_bc, material contact angle cos_angle, elemental area dxdy, network structure layers, capillary diameter d, capillary length l, and the domain size ub and lb. Additionally, lambda_lamb is included as a learnable parameter in the network optimization. Two optimizers are also defined in this class, with learning rates, maximum iteration numbers, and other parameters defined through torch.optim.LBFGS() and torch.optim.Adam(), details of which can be referred to in the PyTorch official documentation (torch.optim — PyTorch 2.1 documentation).
+•	Lines 35-69 define a **PhysicsInformedNN** class, which is used for PINN computations and to store PINN computation information. When declaring a **PhysicsInformedNN** object, it is necessary to input the coordinates of points within the domain **x_area**, boundary point coordinates **x_bc**, unit normal vectors of the boundary points **n_bc**, material contact angle cos_angle, elemental area dxdy, network structure layers, capillary diameter d, capillary length l, and the domain size ub and lb. Additionally, lambda_lamb is included as a learnable parameter in the network optimization. Two optimizers are also defined in this class, with learning rates, maximum iteration numbers, and other parameters defined through torch.optim.LBFGS() and torch.optim.Adam(), details of which can be referred to in the PyTorch official documentation (torch.optim — PyTorch 2.1 documentation).
 
 •	Lines 71-75 perform normalization of the data before inputting it into the network. This is done because if the input coordinates exceed the range of -1 to 1, the network could face the issue of gradient vanishing.
 
