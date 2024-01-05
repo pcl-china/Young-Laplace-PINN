@@ -31,7 +31,7 @@ In this file:
 
 •	Lines 161-175: For any given boundary point, **find_normal()** can be used to find the unit normal vector.
 
-•	Lines 178-186: Input domain **points x_area** and boundary points **bc**, and specify whether to delete points inside or outside the boundary.
+•	Lines 178-186: Input domain points **x_area** and boundary points **bc**, and specify whether to delete points inside or outside the boundary.
 
 •	Lines 189-210: The main function.
 
