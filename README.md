@@ -3,7 +3,7 @@ This is an open source PINN code for solving the Young-Laplace equation in a tub
 # Paper Citation
 This paper is in the under review stage.
 # Case
-To facilitate other scholars in reproducing this work, a detailed explanation is provided for the computational results of Figure 4 in our paper. The results of Figure 4 can be reproduced by running the **capillary_rise_1.py** file available at https://github.com/pcl-china/Young-Laplace-PINN.
+To facilitate replication of this work by other scholars, we provide below a detailed explanation of the calculations in Fig. 4 of the paper. The results of Fig. 4 can be reproduced by running the **capillary_rise_1.py** file available at https://github.com/pcl-china/Young-Laplace-PINN.
 
 In this file:
 
