@@ -19,7 +19,7 @@ In this file:
 
 •	Lines 77-89 define a function **net_f** for computing the domain residual **f** and the fluid volume **v** of the Young-Laplace equation, where **torch.autograd.grad()** utilizes PyTorch's built-in Automatic Differentiation technology.
 
-•	Lines 91-96 define a function **net_bc_natural** for computing the boundary residual of Young's equation.
+•	Lines 91-96 define a function **net_bc_natural** to compute the residuals of Young's equation on the boundary.
 
 •	Lines 98-120 compute the boundary loss, PDE loss within the domain, and the volume loss, and then sum these losses with weights to obtain the total loss. It should be noted that, based on our experience, the weights for each term should be set such that the three types of losses are on the same order of magnitude. The values of each loss are then recorded and output.
 
@@ -29,13 +29,13 @@ In this file:
 
 •	Lines 140-158 output the final results of the network. This module is for display purposes and does not affect the training process; readers can customize it as needed.
 
-•	Lines 161-175: For any given boundary point, **find_normal()** can be used to find the unit normal vector.
+•	Lines 161-175 include a function named find_normal() to determine the unit normal vector at any given boundary point.
 
-•	Lines 178-186: Input domain points **x_area** and boundary points **bc**, and specify whether to delete points inside or outside the boundary.
+•	Lines 178-186 involve inputting domain points, labeled x_area, and boundary points, labeled bc, with an option to specify the deletion of points either inside or outside the boundary.
 
-•	Lines 189-210: The main function.
+•	Lines 189-210 describe the main function of the code.
 
-•	Lines 211-end: Post-processing of the computational results.
+•	Lines 211-end focus on the post-processing of the computational results.
 
 # Note
 The PINN program is written based on the open source deep learning framework Pytorch version 1.10.2 in python.
