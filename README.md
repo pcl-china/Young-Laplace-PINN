@@ -17,7 +17,7 @@ In this file:
 
 •	Lines 71-75 perform normalization of the data before inputting it into the network. This is done because if the input coordinates exceed the range of -1 to 1, the network could face the issue of gradient vanishing.
 
-•	Lines 77-89 define a function **net_f** for computing the domain residual **f** and the fluid body force **v** of the Young-Laplace equation, where **torch.autograd.grad()** utilizes PyTorch's built-in Automatic Differentiation technology.
+•	Lines 77-89 define a function **net_f** for computing the domain residual **f** and the fluid volume **v** of the Young-Laplace equation, where **torch.autograd.grad()** utilizes PyTorch's built-in Automatic Differentiation technology.
 
 •	Lines 91-96 define a function **net_bc_natural** for computing the boundary residual of Young's equation.
 
